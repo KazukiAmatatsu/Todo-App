@@ -20,8 +20,6 @@ const App = () => {
       ...todos, // スプレット構文で初期値を持ってきてる
       { id: shortid.generate(), content: 'モンハンやる', done: false, priority: '★★★' }, // ここでtodosに追加する部分を書く
     ]);
-    // todos.push({ content: "モンハンやる" });
-    // console.log(todos);
   };
 
   const addTodo = (value, priority) => {
@@ -44,7 +42,7 @@ const App = () => {
   };
 
   const newText = (id, newValue) => {
-    // console.log(newValue);
+    console.log(newValue);
     const newTodos = todos.map((todo) => {
       if (id === todo.id) {
         todo.content = newValue;

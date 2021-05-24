@@ -5,9 +5,8 @@ const Item = (props) => {
   const [newValue, setNewValue] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(newValue);
-    props.newText(newValue);
-    // setNewValue('');
+    props.newText(props.todo.id, newValue);
+    setNewValue('');
   };
   // const [isDone, setIsDone] = useState(false);
   // const handleDelete = () => {
@@ -32,10 +31,9 @@ const Item = (props) => {
           placeholder={props.todo.content}
           value={newValue}
           onChange={(e) => {
-            setNewValue(e.target.Value);
+            setNewValue(e.target.value);
           }}
         />
-        {/* {props.todo.content} */}
       </form>
       <button onClick={props.removeTodo}>削除</button>
     </li>
