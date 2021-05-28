@@ -1,31 +1,31 @@
-import React, { useState } from "react";
-import { useAlert } from "react-alert";
+import React, { useState } from 'react';
+import { useAlert } from 'react-alert';
 // import Select from "react-select";
 // import { useForm } from "react-hook-form";
 
 const options = [
-  { value: "★☆☆", label: "★☆☆" },
-  { value: "★★☆", label: "★★☆" },
-  { value: "★★★", label: "★★★" },
+  { value: '★☆☆', label: '★☆☆' },
+  { value: '★★☆', label: '★★☆' },
+  { value: '★★★', label: '★★★' },
 ];
 
 const InputForm = ({ addTodo }) => {
-  const [value, setValue] = useState("");
-  const [priority, setPriority] = useState("");
+  const [value, setValue] = useState('');
+  const [priority, setPriority] = useState('');
   const alert = useAlert();
   const handleSubmit = (e) => {
     e.preventDefault();
     if (value) {
       addTodo(value, priority);
-      setValue("");
+      setValue('');
     } else {
-      alert.error("エラーです"); //エラーメッセージを出力
+      alert.error('エラーです'); //エラーメッセージを出力
       return false;
     }
   };
   const clearButton = (e) => {
     e.preventDefault();
-    setValue("");
+    setValue('');
   };
   // useFormを使ってバリデーションしようとしたが出来ずに断念
   // const { register, handleSubmit, errors } = useForm();
@@ -49,11 +49,19 @@ const InputForm = ({ addTodo }) => {
         //   },
         // })}
       />
-      <select defaultValue={options[1].value} value={priority} onChange={(e) => setPriority(e.target.value)}>
-        {options.map((option, index) => {
+      <select
+        defaultValue={options[1].value}
+        value={priority}
+        onChange={(e) => setPriority(e.target.value)}
+      >
+        {options.map((option) => {
           // console.log(option.label);
           return (
-            <option key={index} value={option.value} selected={option.value === "★★☆"}>
+            <option
+              key={option.id}
+              value={option.value}
+              selected={option.value === '★★☆'}
+            >
               {option.label}
             </option>
           );
