@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const MonHun = (props) => {
   return (
@@ -11,7 +11,7 @@ const MonHun = (props) => {
 
 export default MonHun;
 
-const StyleMonHun = styled.button`
+const StyleMonHun = styled.div`
   appearance: none;
   border: 0;
   border-radius: 5px;

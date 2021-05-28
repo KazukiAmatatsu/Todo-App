@@ -53,13 +53,19 @@ const ItemList = (props) => {
 
 export default ItemList;
 
-const StyledItemList = styled.div``;
+const StyledItemList = styled.div`
+  padding: 0;
+`;
 
 const StyledFalse = styled.ul`
   list-style: none;
+  margin: 0;
+  padding: 0;
 `;
 
 const StyledTrue = styled.ul`
   list-style: none;
-  color: gray;
+  margin: 0;
+  padding: 0;
+  color: #a9a9a9;
 `;
