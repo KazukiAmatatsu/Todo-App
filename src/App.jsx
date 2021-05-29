@@ -3,7 +3,6 @@ import shortid from 'shortid';
 import InputForm from './InputForm';
 import ItemList from './ItemList';
 import styled from 'styled-components';
-// import MonHun from './MonHun';
 
 const App = () => {
   // JavaScript書く場所
@@ -88,7 +87,6 @@ const App = () => {
       <StyledInputForm>
         <InputForm addTodo={addTodo} />
       </StyledInputForm>
-      {/* <MonHun add={add} /> */}
     </div>
   );
 };
