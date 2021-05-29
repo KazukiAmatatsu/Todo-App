@@ -25,19 +25,6 @@ const App = () => {
     { id: '04', content: '致命的なバグの修正', done: false, priority: '!!' },
   ]);
 
-  // const add = (e) => {
-  //   e.preventDefault(); // preventDefaultでブラウザの標準の挙動をキャンセルする
-  //   setTodos([
-  //     ...todos, // スプレット構文で初期値を持ってきてる
-  //     {
-  //       id: shortid.generate(),
-  //       content: 'モンハンやる',
-  //       done: false,
-  //       priority: '!!!',
-  //     }, // ここでtodosに追加する部分を書く
-  //   ]);
-  // };
-
   const addTodo = (value, priority) => {
     setTodos([
       ...todos,
@@ -55,20 +42,6 @@ const App = () => {
         return todo;
       }
     });
-    // var pushTodo = '';
-    // for (var i = 0; i < todos.length; i++) {
-    //   if (todos[i].done === true) {
-    //     pushTodo = todos[i];
-    //   }
-    // }
-    // これだと配列で取ってきてしまう
-    // const pushTodo = todos.filter((todo) => {
-    //   if (todo.done === true) {
-    //     return true;
-    //   } else {
-    //     return false;
-    //   }
-    // });
     setTodos([...newTodos]);
   };
 

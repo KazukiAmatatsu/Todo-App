@@ -18,11 +18,17 @@ const Item = (props) => {
         type="checkbox"
         id="button"
         checked={props.todo.done}
-        onChange={() => {
+        // onChange={() => {
+        //   props.toggleChecked(props.todo.id);
+        // }}
+      />
+      <label
+        htmlFor="button"
+        className={styles.checkboxStyle}
+        onClick={() => {
           props.toggleChecked(props.todo.id);
         }}
-      />
-      <label htmlFor="button" className={styles.checkboxStyle}>
+      >
         <form onSubmit={handleSubmit} className={styles.content}>
           <span className={styles.priority}>{props.todo.priority}</span>
           {isOpen ? (

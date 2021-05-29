@@ -11,6 +11,7 @@
 .checkbox {
   display: none;
 }
+/* checkboxだとちゃんと動作するが、checkboxStyleだと処理がおかしい */
 
 .checkboxStyle {
   display: inline-block;
