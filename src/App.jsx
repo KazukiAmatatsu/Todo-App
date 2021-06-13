@@ -10,24 +10,21 @@ const App = () => {
     // useStateの()の中身は初期値を設定する
     {
       id: '01',
-      content: '奇しき赫耀のバルファルク',
-      done: false,
-      priority: '!!!',
-    },
-    { id: '02', content: 'ヌシ・ジンオウガ', done: false, priority: '!!!' },
-    {
-      id: '03',
-      content: 'クリックすると入力フォームを表示',
+      content: 'タスクを追加できるよ',
       done: false,
       priority: '!',
     },
-    { id: '04', content: '致命的なバグの修正', done: false, priority: '!!' },
   ]);
 
   const addTodo = (value, priority) => {
     setTodos([
       ...todos,
-      { id: shortid.generate(), content: value, done: false, priority }, // ここでtodosに追加する部分を書く
+      {
+        id: shortid.generate(),
+        content: value,
+        done: false,
+        priority,
+      }, // ここでtodosに追加する部分を書く
     ]);
   };
 
