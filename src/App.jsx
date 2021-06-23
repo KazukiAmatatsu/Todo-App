@@ -67,28 +67,35 @@ const App = () => {
 
   return (
     // JSX...jsを使う場合は{}で囲う
-    <div className="App">
-      <StyledTitle>
-        <h1>ToDo</h1>
-        <h1>{todos.length}</h1>
-      </StyledTitle>
-      <StyledItemList>
-        <ItemList
-          todos={todos}
-          removeTodo={removeTodo}
-          toggleChecked={toggleChecked}
-          addTodo={addTodo}
-          newText={newText}
-        />
-      </StyledItemList>
-      <StyledInputForm>
-        <InputForm addTodo={addTodo} />
-      </StyledInputForm>
-    </div>
+    <StyledApp className="App">
+      <div>
+        <StyledTitle>
+          <h1>ToDo</h1>
+          <h1>{todos.length}</h1>
+        </StyledTitle>
+        <StyledItemList>
+          <ItemList
+            todos={todos}
+            removeTodo={removeTodo}
+            toggleChecked={toggleChecked}
+            addTodo={addTodo}
+            newText={newText}
+          />
+        </StyledItemList>
+        <StyledInputForm>
+          <InputForm addTodo={addTodo} />
+        </StyledInputForm>
+      </div>
+    </StyledApp>
   );
 };
 
 export default App;
+
+const StyledApp = styled.div`
+  margin: 0 auto;
+  width: 400px;
+`;
 
 const StyledTitle = styled.div`
   display: flex;
