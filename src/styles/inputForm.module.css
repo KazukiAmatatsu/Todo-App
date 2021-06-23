@@ -1,17 +1,13 @@
-/* CSS Modules */
-
-.item {
+.InputForm {
   display: flex;
   justify-content: space-between;
   width: 400px;
-  margin: 10px 0;
   border-bottom: solid 1px #a9a9a9;
 }
 
 .checkbox {
   display: none;
 }
-/* checkboxだとちゃんと動作するが、checkboxStyleだと処理がおかしい */
 
 .checkboxStyle {
   display: inline-block;
@@ -35,29 +31,7 @@
   border-radius: 50%;
 }
 
-.checkbox:checked + .checkboxStyle::after {
-  content: '';
-  position: absolute;
-  display: block;
-  box-sizing: border-box;
-  width: 18px;
-  height: 18px;
-  margin-top: -9px;
-  left: 0px;
-  top: 50%;
-  border: solid 2px #fff;
-  background-color: #00ff00;
-  box-shadow: 0 0 0 2px #00ff00;
-  border-radius: 50%;
-}
-
-.priority {
-  color: #00ff00;
-  width: 15px;
-  padding-right: 5px;
-}
-
-.contentText {
+.textArea {
   width: 300px;
   height: 20px;
   margin: 0;
@@ -67,37 +41,13 @@
   box-sizing: border-box;
 }
 
-.contentText:focus {
+.textArea:focus {
   border-color: #fff;
   background: rgba(255, 255, 255, 0);
   outline: 0;
 }
 
-.contentText::placeholder {
-  color: #a9a9a9;
-}
-
 .menuIcon {
-  opacity: 0;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  color: #00ff00;
-  font-size: 18px;
-  font-family: Georgia, serif;
-  border: 1px solid #00ff00;
-  background-color: #fff;
-  border-radius: 50%;
-  margin: 0;
-  text-align: center;
-  line-height: 18px; /* ←円の高さ20px - 上下のボーダー1px */
-}
-
-.item:hover .menuIcon {
-  opacity: 1;
-}
-
-.deleteButton {
   display: inline-block;
   width: 20px;
   height: 20px;
